@@ -58,65 +58,44 @@
 ?>
                     <div id="menuOff">
                         <?php
-                        //$propOff['src'] = 'resources/images/page/home_off.png';
-                        //echo img($propOff);
                         insertMenuItem($pageID,$propOff,'home_off.png');
                         
                         echo img('resources/images/page/lamane.png');
 
-                        //$propOff['src'] = 'resources/images/page/works_off.png';
-                        //echo img($propOff);
                         insertMenuItem($pageID,$propOff,'works_off.png');
 
                         echo img('resources/images/page/lamane.png');
 
-                        //$propOff['src'] = 'resources/images/page/about_off.png';
-                        //echo img($propOff);
                         insertMenuItem($pageID,$propOff,'about_off.png');
                         
                         echo img('resources/images/page/lamane.png');
 
-                        //$propOff['src'] = 'resources/images/page/contact_off.png';
-                        //echo img($propOff);
                         insertMenuItem($pageID,$propOff,'contact_off.png');
                         
                         echo img('resources/images/page/lamane.png');
 
-                        //$propOff['src'] = 'resources/images/page/blog_off.png';
-                        //echo img($propOff);
                         insertMenuItem($pageID,$propOff,'blog_off.png');
                         
                         ?>
                     </div>
                     <div id="menuOn">
                         <?php
-                        //$propOn['src'] = 'resources/images/page/home_on.png';
-                        //echo anchor('home',img($propOn));
                         insertMenuItem($pageID,$propOn,'home_on.png', 'home');
-                        //echo img($propOn);
                         
                         echo img('resources/images/page/lamane.png');
 
-                        //$propOn['src'] = 'resources/images/page/works_on.png';
-                        //echo img($propOn);
                         insertMenuItem($pageID,$propOn,'works_on.png', 'works');
 
                         echo img('resources/images/page/lamane.png');
 
-                        //$propOn['src'] = 'resources/images/page/about_on.png';
-                        //echo img($propOn);
                         insertMenuItem($pageID,$propOn,'about_on.png', 'about');
 
                         echo img('resources/images/page/lamane.png');
 
-                        //$propOn['src'] = 'resources/images/page/contact_on.png';
-                        //echo img($propOn);
                         insertMenuItem($pageID,$propOn,'contact_on.png', 'contact');
 
                         echo img('resources/images/page/lamane.png');
 
-                        //$propOn['src'] = 'resources/images/page/blog_on.png';
-                        //echo img($propOn);
                         insertMenuItem($pageID,$propOn,'blog_on.png', 'blog');
                         ?>
                     </div>

@@ -1,0 +1,175 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    
+    background-color: #e6e6e6;
+}
+
+img{
+    border: none;
+    outline: none;
+}
+
+div#all{
+    position: relative;
+    width: 1024px;
+    margin: 0px auto;
+    
+/*    height:auto !important;  real browsers 
+    height:100%;  IE6: treaded as min-height
+    min-height:100%;  real browsers 
+    top: 0px;
+    left: 0px;*/
+    
+    background-color: white;
+    padding: 0px;
+    
+}
+
+img.curtain{
+    position: absolute;
+    
+}
+
+div#head{
+    
+}
+
+div#hh{
+    background-color: #66cdcc;
+    background-image: url('../images/mainpage/falbana.png');
+    background-repeat: repeat-x;
+    height: 155px;
+}
+
+div#hh_title{
+    position: relative;
+    height: 155px;
+    text-align: center;
+}
+
+img.hht{
+    position: relative;
+/*    margin: 0px auto;*/
+}
+
+div#hl{
+    background-color: #ffcc00;
+    height: 55px;
+    
+}
+
+div#hl_menu{
+    position: relative;
+    top: 15px;
+    text-align: center;
+}
+
+div#hl_menu_on{
+    position: absolute;
+    top:0px;
+    width: 100%;
+    text-align: center;
+}
+
+img.menuitem_choosen, img.menuitem_on, img.menuitem_off{
+    margin-left: 5px;
+}
+
+img.menuitem_choosen, img.menuitem_on{
+    z-index: 5;
+}
+
+div#content{
+    width: 650px;
+    height: 538px;
+    margin: 0px auto;
+    padding-top: 20px;
+    
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 22px;
+    
+    /*background-color: green;*/
+}
+
+div.leftColumn{
+    margin: 0px;
+    padding: 0px;
+    width: 215px;
+    float: left;
+    /*background-color: greenyellow;*/
+}
+
+div.rightColumn{
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+    width: 350px;
+    float: right;
+    /*background-color: green;*/
+}
+
+div.leftColumn img{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+div.rightColumn p {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+div.allColumn{
+    margin: 0px;
+    padding: 0px;
+}
+
+div.bottommargin{
+    clear: both;
+    height: 20px;
+    /*background-color: yellow;*/
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+
+
+
+div.scrollpane{
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div#ad1, div#ad2 {
+    width: 650px;
+/*    margin-left: 40px;
+    margin-top: 25px;*/
+    float: left;
+    
+} 
+
+div#ad1Div, div#ad2Div{
+    height: 160px;
+    width: 628px;
+}
+
+div.newContent{
+    /*background-color: #888;*/
+/*    border: none;  1px solid transparent;*/
+    border-top: none;
+    padding: 10px;
+    text-align: justify;
+    /*    background-image: url(../../../files/images/page/tlo_gora.jpg);*/
+    /*    background-color: red;*/
+}
+
+

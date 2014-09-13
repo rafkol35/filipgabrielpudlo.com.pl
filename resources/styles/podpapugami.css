@@ -1,0 +1,446 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    height:100%; /* needed for container min-height */
+}
+
+body{
+    font-family: Arial, Verdana,Helvetica,sans-serif;
+    background-color: #262626;
+    
+    font-size: 12px;
+    color: #eed49a;
+    
+    /* a teraz opis scrollbara */
+/*    scrollbar-3dlight-color: silver; 
+    scrollbar-arrow-color: black; 
+    scrollbar-base-color: white; 
+    scrollbar-dark-shadow-color: black; */
+/*    scrollbar-face-color: red; */
+/*    scrollbar-highlight-color: silver; 
+    scrollbar-shadow-color: silver;*/
+}
+
+img {
+    border: none;
+}
+
+div#container{
+    position:relative; /* needed for footer positioning*/
+    margin:0 auto; /* center, not in IE5 */
+    width: 1059px;
+    height:auto !important; /* real browsers */
+    height:100%; /* IE6: treaded as min-height*/
+    min-height:100%; /* real browsers */
+    top: 0px;
+    left: 0px;
+    
+    background-color: #2e1d0e;
+    background-image: url(../../images/page/tlo_gora.jpg);
+    background-repeat: no-repeat;
+}
+
+div#footer {
+    position:absolute;
+    width:100%;
+    bottom:0px; /* stick to bottom */
+    height: 66px;
+    padding-top: 134px;
+        
+    background-color: #161515;
+    background-image: url(../../images/page/tlo_dol.jpg);
+    background-repeat: no-repeat;
+}
+div#footer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+div#content{
+    padding-top: 320px;
+    padding-bottom: 200px;
+}
+
+div#header{
+    background-color: greenyellow;
+}
+
+div#menu{
+    position: relative;
+    top: 255px;
+    color: black;
+}
+
+img.menuItemOn, img.menuItemOff, img.menuItemChs{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+img.menuItemOff{
+    z-index: 4;
+}
+
+div#footerContent{
+    position: relative;
+    height: 66px;
+}
+
+img.footerImg{
+    position: absolute;
+    top: 0px;
+    left: 30px;
+}
+
+div.footerDiv{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 950px;
+    height: 20px;
+    color: #a2a1a1;
+    font-size: 11px;
+}
+
+div.footerDiv2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 20px;
+}
+
+div.newHeader{
+    background-image: url(../../images/page/tlo_wydarzenia.gif); 
+    background-repeat: repeat-x;
+    height: 28px;
+    border: 1px solid #797d00;
+    border-bottom: none;
+}
+
+div.scrollpane{
+    overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+div.scrollpane p{
+/*    margin: 0px;*/
+    
+}
+
+div.newContent{
+    background-color: #0e0e0e;
+    border: 1px solid #593914;
+    border-top: none;
+    padding: 10px;
+    text-align: justify;
+/*    background-image: url(../../../files/images/page/tlo_gora.jpg);*/
+/*    background-color: red;*/
+}
+
+div#nd{
+    width: 600px;
+    margin-left: 40px;
+    margin-top: 25px;
+    float: left;
+}
+
+div#newsDiv{
+    height: 350px;
+    width: 578px;
+    padding: 10px;
+}
+
+div#menuDiv{
+    height: 350px;
+    padding: 10px;
+    
+    width: 878px;
+}
+
+
+div#eventsDiv{
+    height: 350px;  
+    width: 268px;
+}
+
+div#ed{
+    width: 290px;
+    margin-right: 40px;
+    margin-top: 25px;
+    float: right;
+}
+
+div#md{
+/*    margin: 25px 40px 0px 40px;*/
+    margin: 25px auto 0px auto;
+    width: 900px;
+}
+
+div#sed{
+    margin-top: 25px;
+/*    margin-right: 40px;*/
+    float: right;
+    width: 294px;
+    position: absolute;
+    right: 40px;
+    z-index: 30;
+}
+
+div#sportEventsDivHeader{
+    
+}
+
+div.sportEventHeader{
+    background-image: url(../../images/page/tlo_sport.gif); 
+    background-repeat: repeat-x;
+    height: 52px;
+    border: 1px solid #593914;
+    border-bottom: none;
+}
+
+div#sportEventDiv{
+    min-height: 400px;
+}
+
+div.sportEventContent{
+    background-color: #e5d6b3;
+    border: 1px solid #593914;
+    border-bottom: none;
+    border-top: none;
+    padding: 10px;
+    text-align: justify;
+    color: #1f1d18;
+    position: relative;
+    background-image: url(../../images/page/tlo_sport2_1.gif); 
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+th{
+    color: red;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+div.sportEventContent td, th{
+/*    border: 1px solid black;*/
+}
+
+tr{
+height: 30px;    
+font-weight: bold;
+}
+
+div.sportEventContent tr{
+    border-bottom: 1px solid black;
+}
+
+div.sportEventsFooter{
+    position: relative;
+    width: 247px;
+    height:44px;
+    
+    background-color: #e5d6b3;
+    color: #1f1d18;
+        
+    float:right;
+    border: 1px solid #593914;
+    border-top: none;
+    text-align: right;
+/*    padding-right: 5px;*/
+
+ background-image: url(../../images/page/tlo_sport2_2.gif); 
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+
+div#ad1, div#ad2 {
+    width: 650px;
+    margin-left: 40px;
+    margin-top: 25px;
+    float: left;
+} 
+
+div#ad1Div, div#ad2Div{
+    height: 160px;
+    width: 628px;
+}
+
+p#bigletter:first-letter {
+    font-size: 300%; 
+    font-family: 'Times New Roman';
+}
+
+div#gallery{
+    margin: 25px 40px 0px 60px;
+/*    border: 1px solid #593914;*/
+}
+
+div#gallery img{
+    border: 1px solid #593914;
+}
+
+div#galleries{
+    margin: 0px 40px 0px 60px;
+/*    border: 1px solid #593914;*/
+    height: 100px;
+    position: relative;
+}
+
+div#galleriesDiv{
+    width: 800px;
+    height: 100px;
+/*    background-color: green;*/
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+div#galleriesDivScroll{
+    position: absolute;
+}
+
+div.galleryLogoDiv{
+    position: absolute;
+    width: 160px;
+    height: 100px;
+/*    border: 1px solid red;*/
+    text-align: center;
+}
+
+img.galleryLogo{
+    width: 75px;
+    height: 75px;
+    border: 1px solid #593914;
+    cursor: pointer;
+}
+
+img.fotamini{
+    width: 75px;
+    height: 75px;
+    margin-left: 5px;
+    margin-bottom: 1px;
+    margin-top: 0px;
+    border: 1px solid #593914;
+    cursor: pointer;
+}
+
+div.log, div.logout{
+    background-color: #2d1c0d;
+    border: 2px solid gold;
+    width: 300px; 
+    margin: 0px auto;
+    text-align: right; 
+    padding: 10px;
+    font-size: 14px;
+}
+
+div.logout{
+    text-align: center; 
+}
+
+.galleryButton, .galleryButton2{
+    cursor: pointer;
+}
+
+.galleryButton2{
+    position: absolute;
+    top: 23px;
+}
+
+div.photoPage{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 255px;
+    height: 400px;
+/*    border: 1px solid black;*/
+}
+
+/************************************************************/
+div#rbr{
+    width: 600px;
+    height: 400px;
+    margin: 0px auto 0px 10px;
+    position: relative;
+/*    background-color: red;*/
+}
+
+div#rbrScreen{
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+/*    background-color: green;*/
+}
+
+div#rbPhotoCont{
+    position: absolute;
+    top: 0px;
+}
+
+div#rbDesc{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding-top: 2px;
+    text-align: left;
+    width: 200px;
+    height: 60px;
+}
+
+div#rbTitle{
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+}
+
+div#rbCounter{
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    width: 50px;
+    text-align: center;
+}
+
+.rbPhoto{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    width: 600px;
+    height: 400px;
+    border: 1px solid #593914;
+}
+
+div#rbLeft, div#rbRight, div#rbOnOff{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+div#rbRight{
+    left: 60px;
+}
+
+div#rbOnOff{
+    left: 80px;
+}
+
+#footer a{
+    color: white;
+    text-decoration: none;
+}

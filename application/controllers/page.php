@@ -123,7 +123,8 @@ class Page extends CI_Controller {
     
      public function login() {
         $this->load->helper('form');
-
+        $this->load->library('session');
+        
         $data['error_message'] = '';
         if (isset($_POST['username'])) {
             $this->load->model('MUsers', 'MUsers', TRUE);
@@ -151,6 +152,8 @@ class Page extends CI_Controller {
     }
 
     public function logout() {
+        $this->load->library('session');
+        
         $this->load->library('session');
         $this->session->sess_destroy();
         

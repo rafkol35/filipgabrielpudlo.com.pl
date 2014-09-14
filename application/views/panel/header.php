@@ -6,7 +6,7 @@ include_once './resources/scripts/includes/panel/panel_menu.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Pod palmami - Panel Administracyjny - <?php echo $title; ?></title>
+        <title><?php echo base_url(); ?> - Panel Administracyjny - <?php echo $title; ?></title>
 
         <?php
         echo link_tag('resources/styles/panel.css');
@@ -37,7 +37,7 @@ include_once './resources/scripts/includes/panel/panel_menu.php';
             <div style="clear: both;">
             </div>
             <div id="content">
-                <div id="logOutDiv" class="ieaButton" style="float: right;"><?php echo anchor('/podpalmami/logout', 'Wyloguj'); ?></div>
+                <div id="logOutDiv" class="ieaButton" style="float: right;"><?php echo anchor('/page/logout', 'Wyloguj'); ?></div>
                 <div id="helpDiv" class="ieaButton" style="float: right;"><?php echo anchor('/panel/index', 'Pomoc'); ?></div>
 
                 <!--<div id="pagesEdit" class="ieaButton" style="float: right;"><?php echo anchor('/panel/pages', 'Strony'); ?></div>-->
@@ -49,5 +49,5 @@ include_once './resources/scripts/includes/panel/panel_menu.php';
                     <div id="userDiv" class="ieaButton" style="float: right;"><?php echo anchor('/panel/users/myAccount/'.$this->session->userdata('uid'), 'Moje konto'); ?></div>
                 <?php } ?>
                 <h2 style="text-decoration: underline;"><?php echo $title; ?></h2>
-                <h5 style="margin-top: 5px;">Pod palmami - Panel Administracyjny</h5>
+                <h5 style="margin-top: 5px;"><?php echo base_url(); ?> - Panel Administracyjny</h5>
                 <hr style="margin: 10px 0px" />

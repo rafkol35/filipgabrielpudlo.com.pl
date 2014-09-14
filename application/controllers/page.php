@@ -66,6 +66,17 @@ class Page extends CI_Controller {
         $this->load->view('front/footer2');
     }
 
+    public function works(){
+        $data['title'] = "Works";
+        $data['includeJSs'] = array('index2.php');
+        
+        $data['pageID'] = 'works';
+        
+        $this->load->view('front/header2',$data);
+        $this->load->view('front/subpages/works',$data);
+        $this->load->view('front/footer2');
+    }
+    
     public function about(){
         $data['title'] = "About";
         $data['includeJSs'] = array('index2.php');

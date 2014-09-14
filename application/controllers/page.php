@@ -45,6 +45,11 @@ class Page extends CI_Controller {
         $this->load->view('front/footer');
     }
     
+//     const
+//          PT_Black = 0
+//        , PT_White = 1
+//    ;
+
     public function index(){
         $this->home();
     }
@@ -60,6 +65,7 @@ class Page extends CI_Controller {
         $data['includeJSs'] = array('index2.php');
         
         $data['pageID'] = 'page/home';
+        $data['PT'] = '1';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/home',$data);
@@ -71,6 +77,7 @@ class Page extends CI_Controller {
         $data['includeJSs'] = array('index2.php');
         
         $data['pageID'] = 'page/works';
+        $data['PT'] = '2';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/works',$data);
@@ -82,6 +89,7 @@ class Page extends CI_Controller {
         $data['includeJSs'] = array('index2.php');
         
         $data['pageID'] = 'page/about';
+        $data['PT'] = '2';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/about',$data);
@@ -93,6 +101,7 @@ class Page extends CI_Controller {
         $data['includeJSs'] = array('index2.php');
         
         $data['pageID'] = 'page/contact';
+        $data['PT'] = '2';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/contact',$data);
@@ -104,6 +113,7 @@ class Page extends CI_Controller {
         $data['includeJSs'] = array('index2.php');
         
         $data['pageID'] = 'page/blog';
+        $data['PT'] = '2';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/blog',$data);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: <?php echo $PT==1?'black':'white'; ?>">
     <head>
         <meta charset="utf-8">
         <title>Filip Gabriel Pudło - <?php echo $title; ?></title>
@@ -26,11 +26,11 @@
         ?>
         
     </head>
-    <body>
-        <div id="all">
-            <div id="head">
+    <body style="background-color: <?php echo $PT==1?'black':'white'; ?>">
+        <div id="all<?php echo $PT==1?'Black':'White'; ?>">
+            <div id="head<?php echo $PT==1?'Black':'White'; ?>">
                 
-                <?php echo img('resources/images/page/filip_white.png'); ?>
+                <?php echo img('resources/images/page/'.($PT==1?'filip_white':'filip_grey').'.png'); ?>
                 
                 <div id="menu">
                     <?php 

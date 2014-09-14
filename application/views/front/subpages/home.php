@@ -1,3 +1,4 @@
+home
 <div style="text-align: center;">
 <!--    <video width="950" height="534" autoplay>
         <source src="<?php 
@@ -6,3 +7,4 @@
         Your browser does not support the video tag.
     </video>-->
 </div>
+home

@@ -46,22 +46,63 @@ class Page extends CI_Controller {
     }
     
     public function index(){
+        $this->home();
+    }
+    
+    public function home(){
         //$this->jscripts[] = 'index.js';
         //$this->includeJSs[] = 'index.php';
         //$this->page(0);
         
         //$this->load->view('front/test');
         
-        $data['title'] = "Main Page";
+        $data['title'] = "Home";
         $data['includeJSs'] = array('index2.php');
         
         $data['pageID'] = 'home';
         
         $this->load->view('front/header2',$data);
-        $this->load->view('front/subpages/index2',$data);
+        $this->load->view('front/subpages/home',$data);
         $this->load->view('front/footer2');
     }
 
+    public function about(){
+        $data['title'] = "About";
+        $data['includeJSs'] = array('index2.php');
+        
+        $data['pageID'] = 'about';
+        
+        $this->load->view('front/header2',$data);
+        $this->load->view('front/subpages/about',$data);
+        $this->load->view('front/footer2');
+    }
+    
+    public function contact(){
+        $data['title'] = "Contact";
+        $data['includeJSs'] = array('index2.php');
+        
+        $data['pageID'] = 'contact';
+        
+        $this->load->view('front/header2',$data);
+        $this->load->view('front/subpages/contact',$data);
+        $this->load->view('front/footer2');
+    }
+    
+    public function blog(){
+        $data['title'] = "Blog";
+        $data['includeJSs'] = array('index2.php');
+        
+        $data['pageID'] = 'blog';
+        
+        $this->load->view('front/header2',$data);
+        $this->load->view('front/subpages/blog',$data);
+        $this->load->view('front/footer2');
+    }
+    
+    
+    
+    
+    
     public function mojteatrdladzieci(){
         $this->includeJSs[] = 'stdmenu.php';
         $this->page(1);

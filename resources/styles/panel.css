@@ -1,0 +1,394 @@
+* { margin: 0; padding: 0; }
+body { font: normal 12px Tahoma; color: #000; background: #444444; }
+
+#container {
+    width: 1000px;
+    margin: auto;
+    /*background: #396B8C;*/
+    position: relative;
+    background: #eeeeee;
+}
+
+#panelMenu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5px;
+    background: #898B8C;
+    padding: 10px 5px 10px 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+ul li{
+    margin-top: 3px;
+    /*display: block;*/
+    background-color: #a9aBaC;
+    padding: 2px;
+
+    height: 15px;
+    overflow: hidden;
+
+}
+
+.mhr{
+   margin-top: 3px;
+}
+
+ul li a { text-decoration: none; color: #000; }
+ul li.active { background-color: #396B8C; }
+/*ul li.active2 { background-color: #f9aB3C; }
+ul li.active a { color: #fff; }
+*/
+li.mmi{
+    background-color: #ffdB4C;
+}
+li.mmi2{
+    background-color: #a9fB8C;
+}
+
+#content { color: #000; padding: 10px 20px 10px 50px; /*background: #96B8C;*/ min-height: 1100px; }
+
+img.filemini{
+    border: none;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 5px;
+    /*margin-right: 10px;*/
+}
+
+div.photoTitleDiv, div.fileNameDiv{
+    float: left;
+}
+
+div.photoFileDiv{
+    float: left;
+    margin-top: 3px;
+}
+
+div.showGalleryDiv{
+    float: right;
+    margin-top: 3px;
+}
+
+
+#loader{
+    margin-top: 15px;
+    background-color: #497B9C;
+    float: right;
+    width: 370px;
+    border: 1px solid blue;
+    min-height: 300px;
+}
+#tooverflow{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: red;
+    overflow: hidden;
+}
+
+#sortme2{
+    width: 400px;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #497B9C;
+    float: left;
+    border: 1px solid blue;
+    height: 600px;
+}
+
+#gfxList2{
+    margin-top: 10px;
+    padding: 5px;
+    float: right;
+    width: 340px;
+    height: 600px;
+    border: 1px solid blue;
+    background-color: #598BaC;
+}
+
+#photosList, #filesList, #filesSorter, #galleriesList, #pagesList, #menuItemsList, #albumsList{
+    width: 350px;
+    background-color: #888888;
+    float: left;
+    border: 2px solid black;
+    height: 750px;
+    overflow: scroll;
+}
+
+#downloadableFilesList{
+    margin: 0px auto;
+    height: auto;
+    width: 550px;
+    background-color: #888888;
+    border: 2px solid black;
+    padding-bottom: 5px;
+}
+
+#filesList{
+    width: 270px;
+    margin-left: 10px;
+}
+
+#filesSorter{
+    width: 250px;
+    margin-left: 10px;
+    overflow: hidden;
+    height: 740px;
+    padding: 5px;
+}
+
+#galleriesList{
+    float: none;
+    overflow: scroll;
+    height: 500px;
+    text-align: center;
+    width: 400px;
+}
+
+#filesSort{
+    overflow: visible;
+    height: auto;
+}
+
+#filesTransDiv{
+    
+}
+
+.menuLinks{
+    float: right;
+}
+
+.menuLinks a{
+    cursor: pointer;
+    padding: 1px;
+    margin-left: 2px;
+    border: solid 1px #7FAAFF;
+    background-color: #C5D9FF;
+    color: black;
+}
+
+#loader2{
+    margin: 15px auto;
+    background-color: #497B9C;
+    width: 750px;
+    border: 1px solid blue;
+    min-height: 300px;
+    padding: 10px;
+}
+
+#divDesc{
+    width: 100%;
+    height: 22px;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#divDesc1{
+    position: absolute;
+    left: 15px;
+}
+
+#divDesc2{
+    position: absolute;
+    left: 375px;
+}
+
+.delButton{
+    cursor: pointer;
+    float: right;
+    background-color: transparent;
+}
+
+div.removeButton{
+    cursor: pointer;
+    float: right;
+    width: 14px;
+    height: 14px;
+    background-image: url('delbutt.gif');
+}
+
+
+.ieaButton, .editButton, .ieaDisabledButton{
+    cursor: pointer;
+    padding: 1px 5px;
+    margin: 0px 0px 10px 10px;
+    border: solid 1px #7FAAFF;
+    background-color: #C5D9FF;
+    color: black;
+}
+
+.ieaDisabledButton{
+    background-color: #ccc;
+    color: #888;
+    cursor: default;
+}
+
+.ieaButton a{
+    color: black;
+    text-decoration: none;
+}
+
+.editButton{
+    float: right;
+    margin: 0px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.editButton a{
+    text-decoration: none;
+    color: black;
+}
+
+.errorDiv{
+    background-color: #ff0000;
+    color: #000000;
+    font-size: 14px;
+}
+
+.errorDiv2{
+    margin: 50px auto;
+    padding: 10px;
+    width: 300px;
+    border: 5px solid #ff3333;
+    background-color: #ffff66;
+    color: #000;  
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.ui-state-highlight { 
+    /*background-color: #cccccc;*/ 
+    /*height: 60px;*/ 
+}
+
+#draggable { cursor: move; background-color: #598BaC; width: 100px; height: 25px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+#droppable { background-color: #598BaC; width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+
+.rdrag{ cursor: move; }
+
+.rdrag2{
+    cursor: move;
+    text-align: left;
+    background-color: #ccaa33;
+    border: 1px solid black;
+    margin: 5px auto 0px 5px;
+    width: 220px;
+    padding: 3px 5px;
+}
+
+.fileListItem{
+    text-align: left;
+    background-color: #ccaa33;
+    border: 1px solid black;
+    margin: 5px auto 0px auto;
+    width: 500px;
+    padding: 3px 5px;
+}
+
+.rdrop, .printChapter{
+    cursor: move;
+    background-color: #ddee88;
+    border: 1px solid black;
+    margin: 5px auto;
+    width: 300px;
+    padding: 5px 5px;
+}
+
+.printChapter{
+    width: 650px;    
+}
+
+.rdropimg{
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 10px;
+}
+
+div.odritem{
+    background-color: #598BaC;
+    margin: 5px 0px;
+    padding: 10px;
+}
+
+p.orditemp{
+    background-color: #79aBcC;
+    width: 75%;
+    padding: 10px;
+    float: left;
+}
+
+div.ordsort{
+    background-color: #598BaC;
+    text-align: center;
+    font-size: 14px;
+}
+
+div.ordsort a{
+    background-color: #8a3;
+    color: white;
+    font-weight: bolder;
+}
+
+div#yearchoosercont{
+    background-color: #594;
+}
+
+div.yearchooser{
+    margin: 5px 0px 5px 10px;
+    width: 60px;
+    height: 20px;
+    background-color: #9d8;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    /*display: inline;*/
+}
+
+div.yearchooser a{
+    color: white;
+    text-decoration: none;
+}
+
+/*************************/
+div#leftCS{
+    /*float: left;*/
+    width: 240px;
+    /*background-color: orange;*/
+}
+
+div.sampleAkt{
+    width: 100%;
+    height: 92px;
+    border-bottom: 1px dashed white;
+    color: white;
+    background-color: #dddddd;
+}
+
+div.sAd{
+    width: 220px;
+    height: 87px;
+    margin: 15px auto 0px auto;
+    /*background-color: green;*/
+}
+
+div.sAd a{
+
+}
+
+div.sAd2{
+    height: 65px;
+}
+
+
+/*************************/
+
+.warning{
+    border: 2px solid red;
+    background-color: #ffdB4C;
+}

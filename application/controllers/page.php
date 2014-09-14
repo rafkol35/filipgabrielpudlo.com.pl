@@ -121,38 +121,50 @@ class Page extends CI_Controller {
     }
     
     
-    
-    
-    
-    public function mojteatrdladzieci(){
-        $this->includeJSs[] = 'stdmenu.php';
-        $this->page(1);
+     public function login() {
+        $this->load->helper('form');
+
+        $data['error_message'] = '';
+        if (isset($_POST['username'])) {
+            $this->load->model('MUsers', 'MUsers', TRUE);
+
+            $username = $this->input->post('username');
+            $password = $this->input->post('userpass');
+            if ($this->MUsers->authenticate_user($username, $password, $uid, $is_admin)) {
+                $this->session->set_userdata('uid', $uid);
+                $this->session->set_userdata('is_admin', $is_admin);
+                redirect('panel/index', 'refresh');
+            } else {
+                $data['error_message'] = '<p>Nieprawidłowy login i / lub hasło</p>';
+            }
+        }
+
+        $data['title'] = "Logowanie do edycji";
+        $data['includeJSs'] = array('index2.php');
+        
+        $data['pageID'] = 'page/login';
+        $data['PT'] = '1';
+        
+        $this->load->view('front/header2',$data);
+        $this->load->view('front/subpages/login',$data);
+        $this->load->view('front/footer2');
     }
-    
-    public function repertuar(){
-        $this->includeJSs[] = 'stdmenu.php';
-        $this->page(2);
+
+    public function logout() {
+        $this->load->library('session');
+        $this->session->sess_destroy();
+        
+        $data['title'] = "Wylogowanie z edycji";
+        $data['includeJSs'] = array('index2.php');
+        
+        $data['pageID'] = 'page/logout';
+        $data['PT'] = '1';
+        
+        $this->load->view('front/header2',$data);
+        $this->load->view('front/subpages/logout',$data);
+        $this->load->view('front/footer2');
     }
-    
-    public function omnie(){
-        $this->includeJSs[] = 'stdmenu.php';
-        $this->page(3);
-    }
-    
-    public function wspolpracownicy(){
-        $this->includeJSs[] = 'stdmenu.php';
-        $this->page(4);
-    }
-    
-    public function rekomendacje(){
-        $this->includeJSs[] = 'stdmenu.php';
-        $this->page(5);
-    }
-    
-    public function kontakt(){
-        $this->includeJSs[] = 'stdmenu.php';
-        $this->page(6);
-    }
+
 }
 
 /* End of file welcome.php */

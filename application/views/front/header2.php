@@ -80,23 +80,23 @@
                     </div>
                     <div id="menuOn">
                         <?php
-                        insertMenuItem($pageID,$propOn,'home_on.png', 'home');
+                        insertMenuItem($pageID,$propOn,'home_on.png', 'page/home');
                         
                         echo img('resources/images/page/lamane.png');
 
-                        insertMenuItem($pageID,$propOn,'works_on.png', 'works');
+                        insertMenuItem($pageID,$propOn,'works_on.png', 'page/works');
 
                         echo img('resources/images/page/lamane.png');
 
-                        insertMenuItem($pageID,$propOn,'about_on.png', 'about');
+                        insertMenuItem($pageID,$propOn,'about_on.png', 'page/about');
 
                         echo img('resources/images/page/lamane.png');
 
-                        insertMenuItem($pageID,$propOn,'contact_on.png', 'contact');
+                        insertMenuItem($pageID,$propOn,'contact_on.png', 'page/contact');
 
                         echo img('resources/images/page/lamane.png');
 
-                        insertMenuItem($pageID,$propOn,'blog_on.png', 'blog');
+                        insertMenuItem($pageID,$propOn,'blog_on.png', 'page/blog');
                         ?>
                     </div>
                 </div>

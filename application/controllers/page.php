@@ -59,7 +59,7 @@ class Page extends CI_Controller {
         $data['title'] = "Home";
         $data['includeJSs'] = array('index2.php');
         
-        $data['pageID'] = 'home';
+        $data['pageID'] = 'page/home';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/home',$data);
@@ -70,7 +70,7 @@ class Page extends CI_Controller {
         $data['title'] = "Works";
         $data['includeJSs'] = array('index2.php');
         
-        $data['pageID'] = 'works';
+        $data['pageID'] = 'page/works';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/works',$data);
@@ -81,7 +81,7 @@ class Page extends CI_Controller {
         $data['title'] = "About";
         $data['includeJSs'] = array('index2.php');
         
-        $data['pageID'] = 'about';
+        $data['pageID'] = 'page/about';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/about',$data);
@@ -92,7 +92,7 @@ class Page extends CI_Controller {
         $data['title'] = "Contact";
         $data['includeJSs'] = array('index2.php');
         
-        $data['pageID'] = 'contact';
+        $data['pageID'] = 'page/contact';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/contact',$data);
@@ -103,7 +103,7 @@ class Page extends CI_Controller {
         $data['title'] = "Blog";
         $data['includeJSs'] = array('index2.php');
         
-        $data['pageID'] = 'blog';
+        $data['pageID'] = 'page/blog';
         
         $this->load->view('front/header2',$data);
         $this->load->view('front/subpages/blog',$data);

@@ -84,6 +84,20 @@ class Page extends CI_Controller {
         $this->load->view('front/footer2');
     }
     
+    public function work($workID){
+        // znalesc tytul lepszy  czyli nazwe pracy
+        $data['title'] = "Work ";
+        $data['includeJSs'] = array('index2.php');
+        
+        $data['pageID'] = 'page/work';
+        $data['PT'] = '2';
+        
+        $this->load->view('front/header2',$data);
+        $this->load->view('front/subpages/works',$data);
+        $this->load->view('front/footer2');
+    }
+    
+    
     public function about(){
         $data['title'] = "About";
         $data['includeJSs'] = array('index2.php');

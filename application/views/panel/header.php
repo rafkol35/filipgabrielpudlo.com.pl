@@ -11,6 +11,7 @@ include_once './resources/scripts/includes/panel/panel_menu.php';
         <?php
         echo link_tag('resources/styles/panel.css');
         echo script_tag('resources/scripts/jquery-1.10.2.min.js');
+        //echo script_tag('resources/scripts/jquery-1.6.2.min.js');
         echo script_tag('resources/scripts/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js');
         echo script_tag('resources/scripts/jquery-ui-1.10.4.custom/js/jquery.ui.datepicker-pl.js');
         echo link_tag('resources/scripts/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css');

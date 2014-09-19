@@ -7,7 +7,8 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         
         <?php 
-        echo script_tag('resources/scripts/jquery-1.6.2.min.js');
+        //echo script_tag('resources/scripts/jquery-1.6.2.min.js');
+        echo script_tag('resources/scripts/jquery-1.10.2.min.js');
         
         echo link_tag('resources/styles/fgp.css');
         

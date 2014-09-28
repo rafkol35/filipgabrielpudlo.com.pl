@@ -127,6 +127,20 @@ class MProjects extends CI_Model{
         $this->db->order_by('id', 'asc');
         return $this->db->get()->result();
     }
+    
+    function getAllWorks(){
+        $this->db->select('id,title_pl,album_id');
+        $this->db->from('projects');
+        $this->db->order_by('sort', 'asc');
+        $works = $this->db->get()->result();
+        // obrazek logo do kazdego:
+        foreach ( $works as $work ){
+            
+            //$work->firstPicture
+        }
+        
+        return $works;
+    }
 
     function get_photos($id){
         $this->db->select('*');

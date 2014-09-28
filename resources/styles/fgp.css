@@ -2,7 +2,7 @@ html,body{
     margin: 0px;
     padding: 0px;
     
-    background-color: #0ff;
+    background-color: #fff;
 }
 
 img{
@@ -50,6 +50,34 @@ div#headBlack, div#headWhite{
 
 div#headWhite{
     border-bottom: 1px solid black;
+}
+
+div#footerWhite, div#footerBlack{
+    /*text-align: center;*/
+    /*padding: 60px 0px 50px 0px;*/
+    border-top: 1px solid white;
+    
+    padding: 40px 20px;
+}
+
+div#headWhite{
+    border-top: 1px solid black;
+}
+
+div#works{
+    padding: 50px 0px;
+}
+
+div.workItem{
+    background-color: green;
+/*    float: left;*/
+    display: inline;
+    border: 2px solid red;
+}
+
+div.workItem img{
+    width: 300px;
+    height: 190px;
 }
 
 div#menu{

@@ -17,8 +17,8 @@
         //echo script_tag('resources/scripts/jquery.mousewheel.js');
         ?>
         
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resources/scripts/slimbox/css/slimbox2.css" media="screen" />
-        <script type="text/javascript" src="<?php echo base_url() ?>resources/scripts/slimbox/js/slimbox2.js"></script>
+<!--        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resources/scripts/slimbox/css/slimbox2.css" media="screen" />
+        <script type="text/javascript" src="<?php echo base_url() ?>resources/scripts/slimbox/js/slimbox2.js"></script>-->
         
         <?php
         if(isset($csss)) foreach ( $csss as $css )echo '<link rel="Stylesheet" type="text/css" href="'.base_url()."files/".$css."\" />\n";

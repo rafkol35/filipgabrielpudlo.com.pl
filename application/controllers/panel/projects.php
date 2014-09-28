@@ -43,13 +43,13 @@ class Projects extends MY_Controller {
             $this->MFiles->delAllWithGalleyID();
         }
          */
-        $this->load->model('MPhotos','MPhotos',TRUE);
-        $this->MPhotos->delAllWithGalleyID($_POST['id']);
+        //$this->load->model('MPhotos','MPhotos',TRUE);
+        //$this->MPhotos->delAllWithGalleyID($_POST['id']);
         $this->load->model('MProjects', 'MProjects', TRUE);
         $this->MProjects->del($_POST['id']);
 
-        $this->load->model('MTextsbinds','MTextsbinds',TRUE);
-        $this->MTextsbinds->delAllByProject($_POST['id']);
+        //$this->load->model('MTextsbinds','MTextsbinds',TRUE);
+        //$this->MTextsbinds->delAllByProject($_POST['id']);
     }
 
     function modify() {

@@ -119,5 +119,28 @@ class MAlbums extends CI_Model{
         $this->db->order_by('sort', 'asc');
         return $this->db->get('photos')->result();
     }
+    
+    function getFirstPhotoFile($albumID){
+        $this->db->where('album_id', $albumID);
+        $this->db->order_by('sort', 'asc');
+        $this->db->limit(1);
+        $photos = $this->db->get('photos')->result();
+        if( count($photos) == 1 )
+        {
+            $photo = current($photos);
+            $this->db->where('id', $photo->file_id);
+            $files = $this->db->get('files')->result();
+            if( count($files) == 1 ){
+                $file = current($files);
+                return $file->file;
+            }else{
+                return "";
+            }
+        }else {
+            return "";
+        }
+        
+    }
+    
 }
 ?>

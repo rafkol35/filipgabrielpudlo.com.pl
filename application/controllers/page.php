@@ -61,26 +61,37 @@ class Page extends CI_Controller {
         
         //$this->load->view('front/test');
         
-        $data['title'] = "Home";
-        $data['includeJSs'] = array('index2.php');
+        $dataHead['title'] = "Home";
+        $dataHead['includeJSs'] = array('index2.php');
         
-        $data['pageID'] = 'page/home';
-        $data['PT'] = '1';
+        $dataHead['pageID'] = 'page/home';
+        $dataHead['PT'] = '1';
         
-        $this->load->view('front/header2',$data);
-        $this->load->view('front/subpages/home',$data);
+        
+        $this->load->view('front/header2',$dataHead);
+        $this->load->view('front/subpages/home',$dataPage);
         $this->load->view('front/footer2');
     }
 
     public function works(){
-        $data['title'] = "Works";
-        $data['includeJSs'] = array('index2.php');
+        $dataHead['title'] = "Works";
+        $dataHead['includeJSs'] = array('index2.php');
         
-        $data['pageID'] = 'page/works';
-        $data['PT'] = '2';
+        $dataHead['pageID'] = 'page/works';
+        $dataHead['PT'] = '2';
         
-        $this->load->view('front/header2',$data);
-        $this->load->view('front/subpages/works',$data);
+        $this->load->model('MProjects','MProjects',TRUE);
+        $this->load->model('MAlbums','MAlbums',TRUE);
+        
+        $dataPage['projects'] = $this->MProjects->getAllWorks();
+        //$dataPage['albums'] = $this->MAlbums->getAll();
+        
+        foreach ( $dataPage['projects'] as $project ){
+            $project->firstPicture = $this->MAlbums->getFirstPhotoFile($project->album_id);
+        }
+        
+        $this->load->view('front/header2',$dataHead);
+        $this->load->view('front/subpages/works',$dataPage);
         $this->load->view('front/footer2');
     }
     

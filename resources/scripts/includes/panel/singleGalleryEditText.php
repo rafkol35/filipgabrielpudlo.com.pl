@@ -18,6 +18,7 @@
     }
 
     function selChange(combo){
+    console.log("singlegallery");
         var galleryId = <?php echo $galleryID; ?>;
         var newAlbumId = $("#" + combo.id + " option:selected" ).attr('id').substr(3);
 

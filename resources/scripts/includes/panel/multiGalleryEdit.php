@@ -234,6 +234,7 @@
     }
 
     function selChange(combo) {
+        console.log("multigallery");
         var galleryId = combo.id.substr(6);
         var newAlbumId = $("#" + combo.id + " option:selected").attr('id').substr(4);
 

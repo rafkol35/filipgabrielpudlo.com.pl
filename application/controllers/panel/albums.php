@@ -38,9 +38,9 @@ class Albums extends MY_Controller {
 
     }
 
-    function editByGalleryID($galleryID){
-        $this->load->model('MGalleries','MGalleries',TRUE);
-        $albumID = $this->MGalleries->getAlbumID($galleryID);
+    function editByProjectID($projectID){
+        $this->load->model('MProjects','MProjects',TRUE);
+        $albumID = $this->MProjects->get($projectID)->album_id;
         $this->edit($albumID);
     }
 

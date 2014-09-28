@@ -16,6 +16,8 @@ class MProjects extends CI_Model{
         $this->db->order_by('sort', 'asc');
         return current($this->db->get()->result())->logo;
     }
+    
+    
 /*
     function getAllShortByLang($lang){
         $this->db->select('id,title_'.$lang);
@@ -202,6 +204,7 @@ class MProjects extends CI_Model{
     function modify($id,$what,$val){
         $this->db->where('id',$id);
         $this->db->update('projects', array($what=>$val));
+        return $id.$what.$val;
     }
 
     function sort($projects){

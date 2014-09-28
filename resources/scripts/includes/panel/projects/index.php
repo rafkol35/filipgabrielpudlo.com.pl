@@ -89,14 +89,16 @@
     }
 
     function change_gallery_title(lang,nd){
+    //console.log(lang + " " + $(nd).val() + " " +  $(nd).attr('id').substr(9) );
         $.ajax({
             url: "<?php echo site_url('panel/projects/modify'); ?>",
             type: "post",
             data: {
                 id: $(nd).attr('id').substr(9),
                 what: "title_" + lang,
-                val: $(nd).attr('value')
+                val: $(nd).val()
             },
+                    //success: function(data){ console.log(data); },
             cache: false
         });
     }
@@ -128,21 +130,56 @@
     }
 
     function show_projects(){
-        console.log( "<?php echo site_url('panel/projects/toHtml'); ?>" );
+        //console.log( "<?php echo site_url('panel/projects/toHtml'); ?>" );
         $.ajax({
             url: "<?php echo site_url('panel/projects/toHtml'); ?>",
             type: "post",
             success: function(data){ 
-                console.log('asdf')
+                //console.log('asdf')
                 $("#projectsList").html(data); 
             } ,
             cache: false
         });
     }
 
-    $(document).ready( function() {
-        console.log("ready");
+    function asc(){
+        console.log("mi");
+    }
+    
+    function assocGalleryAlbum(mi){
+        //console.log("mi");
+        //console.log($(mi));
+        //console.log( $(mi).attr('id') );
         
+        var agaid = $(mi).attr('id').substr(3);
+        console.log(agaid);
+        
+        var s = "#" + $(mi).attr('id');
+        var albumid = $(s + " option:selected" ).attr("id");
+        
+        console.log(albumid);
+        
+        //return ;
+        
+        $.ajax({
+            url: "<?php echo site_url('panel/projects/modify'); ?>",
+            type: "post",
+            data: { 
+                //whatID: 'id',
+                id: agaid,
+                what: 'album_id',
+                val: albumid.substr(3)
+            },
+            success: function(data){ 
+                console.log(data);
+            },
+            cache: false
+        });   
+    }
+    
+    $(document).ready( function() {
+        //console.log("ready");
+        //console.log("aaaa")
         show_projects();
         addsortable();
 

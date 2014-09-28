@@ -14,6 +14,7 @@ function insertMenuAdmin() {
             <hr class="mhr" />
             <li class="mmi2">POZOSTAŁE</li> 
             <li class="mi"><?php echo anchor('panel/page/slideshow', 'SlideShow'); ?></li>
+            <li class="mi"><?php echo anchor('panel/projects', 'Projekty'); ?></li>
             <li class="mi"><?php echo anchor('panel/albums', 'Albumy'); ?></li>
             <li class="mi"><?php echo anchor('panel/page/gallery', 'Galeria'); ?></li>
             <li class="mi"><?php echo anchor('panel/page/calendar', 'Kalendarz terminów'); ?></li>

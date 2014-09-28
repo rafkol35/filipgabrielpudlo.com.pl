@@ -8,7 +8,7 @@ class Projects extends MY_Controller {
 
     function index() {
         $data['innerJSs'] = array('panel/projects/index.php');
-        $data['title'] =  'Edycja projektów';
+        $data['title'] =  'Projekty';
 
         $this->load->view('panel/header',$data);
         $this->load->view('panel/projects/index');
@@ -24,6 +24,10 @@ class Projects extends MY_Controller {
     function toHtml() {
         $this->load->model('MProjects','MProjects',TRUE);
         $data['galleries'] = $this->MProjects->getAll();
+        
+        $this->load->model('MAlbums','MAlbums',TRUE);
+        $data['albums'] = $this->MAlbums->getAll();
+        
         $this->load->view('panel/projects/ajax/printProjects', $data);
     }
 
@@ -50,7 +54,7 @@ class Projects extends MY_Controller {
 
     function modify() {
         $this->load->model('MProjects','MProjects',TRUE);
-        $this->MProjects->modify($_POST['id'], $_POST['what'], $_POST['val']);
+        echo $this->MProjects->modify($_POST['id'], $_POST['what'], $_POST['val']);
     }
 
     function sort(){

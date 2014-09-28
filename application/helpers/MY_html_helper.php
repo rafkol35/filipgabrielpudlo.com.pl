@@ -22,8 +22,11 @@ if (!function_exists('script_tag')) {
 
 if (!function_exists('removeButton')) {
 
-    function removeButton($onClick) {
-        echo '<div class="removeButton" onclick="'.$onClick.';"></div>';
+    function removeButton($onClick,$gfx='') {
+        if( $gfx === '')
+            echo '<div class="removeButton" onclick="'.$onClick.';"></div>';
+        else
+            echo '<div class="removeButton" onclick="'.$onClick.';">'.img($gfx).'</div>';
     }
 }
 

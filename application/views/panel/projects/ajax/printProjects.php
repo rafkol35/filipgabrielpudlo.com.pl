@@ -1,7 +1,13 @@
 <?php
 
 foreach ( $galleries as $g ){
+    if ( $g->type != 0 ) 
+    {
+        //nie wspieram filmów
+        continue;
+    }
     ?>
+    
     <div class="rdrop" id="gl_<?php echo $g->id ?>">
 
     <div class="photoTitleDiv">
@@ -40,22 +46,20 @@ foreach ( $galleries as $g ){
             </select>
         
     <div class="editButton" style="float: left; margin-left: 10px;"><?php echo anchor('panel/albums/editByProjectID/'.$g->id, 'Edytuj album', array('id'=>"edal_$g->id",'class'=>'edal') ); ?></div>
-
+    <!-- ZDJĘĆ : <?php echo $g->numPhotos; ?> -->
     
     </div>
         
-    <div class="editButton" style="margin-right: 0px;"><?php echo anchor('panel/project/shortText/'.$g->id, 'Skrótowy tekst'); ?></div>
-    <div class="editButton" style="margin-right: 1px;"><?php echo anchor('panel/project/text/'.$g->id, 'Tekst'); ?></div>
-    <?php if ( $g->type == 0 ) { ?>
-    <div class="editButton" style="margin-right: 1px;"><?php echo anchor('panel/project/photos/'.$g->id, 'Edycja'); ?></div>
-    <?php } ?>
+    <br style="clear: both">
+    <div style="float: left">Opis projektu : </div>
+    <div class="editButton" style="float: left; margin-right: 0px;"><?php echo anchor('panel/project/shortDesc/'.$g->id, 'Skrótowy'); ?></div>
+    <div class="editButton" style="float: left; margin-right: 1px;"><?php echo anchor('panel/project/fullDesc/'.$g->id, 'Pełny'); ?></div>
 
 <hr style="margin: 5px; clear: both"/>
     
     <?php if ( $g->type == 0 ) { ?>
     <div class="photoFileDiv">
         Dodano : <?php echo $g->date; ?><br />
-        ZDJĘĆ : <?php echo $g->numPhotos; ?>
     </div>
     <?php } else { ?>
     Nie wspieram filmow

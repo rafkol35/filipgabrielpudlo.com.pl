@@ -15,7 +15,7 @@ include_once './resources/scripts/includes/panel/panel_menu.php';
         echo script_tag('resources/scripts/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js');
         echo script_tag('resources/scripts/jquery-ui-1.10.4.custom/js/jquery.ui.datepicker-pl.js');
         echo link_tag('resources/scripts/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css');
-        echo script_tag('resources/scripts/tinymce/tinymce.min.js');
+        //echo script_tag('resources/scripts/tinymce/tinymce.min.js');
         
         if(isset($styles)) foreach ( $styles as $st )echo '<link rel="Stylesheet" type="text/css" href="'.base_url()."resources/styles/".$st."\" />\n";
         if(isset($jscripts)) foreach ( $jscripts as $js )echo '<script type="text/javascript" src="'.base_url()."resources/scripts/".$js."\"></script>\n";

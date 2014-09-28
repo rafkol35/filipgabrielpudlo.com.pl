@@ -32,6 +32,14 @@ class MY_Model extends CI_Model{
         return $this->get($whatID,$id,false,'',$sortID,$sortType);
     }
     
+    function getAllTable($sortID='',$sortType=''){
+        $this->db->select('*');
+        if ($sortID !== '') {
+            $this->db->order_by($sortID, $sortType);
+        }
+        return $this->db->get($this->TABLE)->result();
+    }
+
     function set($whatID,$id,$valID,$val){
         $this->db->where($whatID,$id);
         $this->db->update($this->TABLE, array($valID=>$val));

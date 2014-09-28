@@ -129,7 +129,7 @@ class MProjects extends CI_Model{
     }
     
     function getAllWorks(){
-        $this->db->select('id,title_pl,album_id');
+        $this->db->select('id,title_pl,album_id,type');
         $this->db->from('projects');
         $this->db->order_by('sort', 'asc');
         $works = $this->db->get()->result();
@@ -140,6 +140,12 @@ class MProjects extends CI_Model{
         }
         
         return $works;
+    }
+    
+    function getAllWork($id){
+        $this->db->select('*');
+        $this->db->from('projects');
+        return current($this->db->get()->result());
     }
 
     function get_photos($id){

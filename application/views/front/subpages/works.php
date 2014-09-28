@@ -3,18 +3,23 @@
     //var_dump($projects);
     $i = 0;
     foreach ($projects as $project) {
+        if( $project->type != 0) continue;
         ?>
 
         <div class="workItem">
             <?php
             echo img('resources/images/photo/normal/' . $project->firstPicture);
             ?>
-            <br />
-            <?php echo $project->title_pl.' '.anchor('','Read more'); ?>
+            <div class="workItemTitle">
+            <?php echo $project->title_pl.' '.anchor('/page/work/'.$project->id,'Read more'); ?>
+            </div>
+            
         </div>
 
 
     <?php } ?>
 </div>
 
-
+<div id="footerWhite" style="margin-top: 30px;">
+    
+</div>

@@ -58,21 +58,27 @@ div#footerWhite, div#footerBlack{
     border-top: 1px solid white;
     
     padding: 40px 20px;
+    
+    clear: both;
+    
+    
 }
 
-div#headWhite{
+div#footerWhite{
     border-top: 1px solid black;
 }
 
 div#works{
-    padding: 50px 0px;
+    padding: 20px 0px;
 }
 
 div.workItem{
-    background-color: green;
+    /*background-color: green;*/
 /*    float: left;*/
-    display: inline;
-    border: 2px solid red;
+    display: inline-block;
+    /*border: 2px solid red;*/
+    margin-top: 30px;
+    margin-left: 10px;
 }
 
 div.workItem img{
@@ -80,6 +86,45 @@ div.workItem img{
     height: 190px;
 }
 
+div.workItemTitle{
+    text-align: left;
+}
+
+div.workItemTitle a{
+    text-decoration: none;
+    color: #666666;
+}
+
+div#work{
+    padding: 30px 30px;
+    text-align: left;
+}
+
+div#workLeftColumn{
+    width: 620px;
+    float: left;
+    background-color: orange;
+    text-align: left;
+}
+div#workRightColumn{
+    background-color: buttonface;
+    text-align: left;
+    margin-left: 30px;
+    float: left;
+}
+
+div#workGallery{
+    height: 410px;
+    background-color: yellowgreen; 
+}
+div#workFullDesc{
+    
+}
+ 
+div#workShortDesc{
+    
+}
+    
 div#menu{
     margin-top: 25px;
 /*    padding-bottom: 30px;*/

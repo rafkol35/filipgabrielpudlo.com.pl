@@ -97,14 +97,28 @@ class Page extends CI_Controller {
     
     public function work($workID){
         // znalesc tytul lepszy  czyli nazwe pracy
-        $data['title'] = "Work ";
-        $data['includeJSs'] = array('index2.php');
         
-        $data['pageID'] = 'page/work';
-        $data['PT'] = '2';
+        $this->load->model('MProjects','MProjects',TRUE);
+        $this->load->model('MAlbums','MAlbums',TRUE);
+        $this->load->model('MFiles','MFiles',TRUE);
         
-        $this->load->view('front/header2',$data);
-        $this->load->view('front/subpages/works',$data);
+        //$dataHead[] = ;
+        $dataPage['project'] = $this->MProjects->getAllWork($workID);
+        
+        $dataHead['title'] = 'Work '.$dataPage['project']->title_pl;
+        $dataHead['includeJSs'] = array('work.php');
+        
+        $dataHead['pageID'] = 'page/work';
+        $dataHead['PT'] = '2';
+        
+        $dataPage['project']->photos = $this->MAlbums->get_photos($dataPage['project']->album_id);
+        
+        foreach ( $dataPage['project']->photos as $photo ){
+            $photo->file = $this->MFiles->get($photo->file_id)->file;
+        }
+        
+        $this->load->view('front/header2',$dataHead);
+        $this->load->view('front/subpages/work',$dataPage);
         $this->load->view('front/footer2');
     }
     

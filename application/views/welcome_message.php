@@ -67,6 +67,8 @@
 <body>
 
 <div id="container">
+    <div>Page rendered in <strong>{elapsed_time}</strong> seconds {memory_usage}</div>
+
 	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
@@ -81,6 +83,9 @@
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
+        <?php 
+            echo 'And the AAA is ...',$aaa->html();
+        ?>
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
 

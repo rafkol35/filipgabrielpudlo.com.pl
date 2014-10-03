@@ -69,7 +69,7 @@ class Page extends CI_Controller {
         
         
         $this->load->view('front/header2',$dataHead);
-        $this->load->view('front/subpages/home',$dataPage);
+        $this->load->view('front/subpages/home');
         $this->load->view('front/footer2');
     }
 

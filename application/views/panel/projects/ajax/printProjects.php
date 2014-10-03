@@ -77,3 +77,5 @@ foreach ( $galleries as $g ){
 <?php
 }
 ?>
+
+<div>Page rendered in <strong>{elapsed_time}</strong> seconds {memory_usage}</div>

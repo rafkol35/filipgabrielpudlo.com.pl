@@ -12,3 +12,4 @@
 
     <hr style="margin: 10px 0px;" />
 
+<div>Page rendered in <strong>{elapsed_time}</strong> seconds {memory_usage}</div>

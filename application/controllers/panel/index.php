@@ -19,7 +19,72 @@ class Index extends MY_Controller {
         $this->load->view('panel/index');
         $this->load->view('panel/footer');
     }
-
+    
+    function home(){
+        $data['title'] = 'Home';
+        $data['mi'] = '';
+        $data['innerJSs'] = array('panel/home.php');
+        $data['jscripts'] = array('tinymce/tinymce.min.js');
+        
+        $this->load->model('MTexts', 'MTexts', TRUE);
+        
+        $dataPage['homelatest1'] = $this->MTexts->get('name','homelatest1')->pl;
+        $dataPage['homelatest2'] = $this->MTexts->get('name','homelatest2')->pl;
+        $dataPage['homelatest3'] = $this->MTexts->get('name','homelatest3')->pl;
+        
+        $this->load->view('panel/header',$data);
+        $this->load->view('panel/page/home',$dataPage);
+        $this->load->view('panel/footer');
+    }
+    function setTextsHome(){
+        $this->load->model('MTexts', 'MTexts', TRUE);
+        $this->MTexts->set('name','homelatest1','pl',$_POST['text1']);
+        $this->MTexts->set('name','homelatest2','pl',$_POST['text2']);
+        $this->MTexts->set('name','homelatest3','pl',$_POST['text3']);
+    }
+    
+    function about(){
+        $data['title'] = 'About';
+        $data['mi'] = '';
+//        $data['innerJSs'] = array('panel/index.php');
+        $data['innerJSs'] = array('panel/about.php');
+        $data['jscripts'] = array('tinymce/tinymce.min.js');
+        
+        $this->load->model('MTexts', 'MTexts', TRUE);
+        
+        $dataPage['textleft'] = $this->MTexts->get('name','aboutleft')->pl;
+        $dataPage['textright'] = $this->MTexts->get('name','aboutright')->pl;
+        
+        $this->load->view('panel/header',$data);
+        $this->load->view('panel/page/about',$dataPage);
+        $this->load->view('panel/footer');
+    }
+    function setTextsAbout(){
+        $this->load->model('MTexts', 'MTexts', TRUE);
+        $this->MTexts->set('name','aboutleft','pl',$_POST['textleft']);
+        $this->MTexts->set('name','aboutright','pl',$_POST['textright']);
+    }
+    
+    function contact(){
+        $data['title'] = 'Contact';
+        $data['mi'] = '';
+        //$data['innerJSs'] = array('panel/index.php');
+        $data['innerJSs'] = array('panel/contact.php');
+        $data['jscripts'] = array('tinymce/tinymce.min.js');
+        
+        $this->load->model('MTexts', 'MTexts', TRUE);
+        $dataPage['text'] = $this->MTexts->get('name','contact')->pl;
+        
+        $this->load->view('panel/header',$data);
+        $this->load->view('panel/page/contact',$dataPage);
+        $this->load->view('panel/footer');
+    }
+    function setTextContact(){
+        $this->load->model('MTexts', 'MTexts', TRUE);
+        $this->MTexts->set('name','contact','pl',$_POST['text']);
+        //echo $_POST['text'];
+    }
+    
     function getNewsAuto(){
         $this->load->model('MSettings','MSettings',TRUE);
         echo $this->MSettings->get('newsAuto');

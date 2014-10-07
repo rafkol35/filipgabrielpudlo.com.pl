@@ -8,6 +8,10 @@ class MY_Model extends CI_Model{
         parent::__construct();
     }
     
+    function has($whatID,$id){
+        return $this->get($whatID,$id,false);
+    }
+    
     function get($whatID,$id,$exactOne=true,$exactField='',$sortID='',$sortType=''){
         $this->db->select('*');
         $this->db->where($whatID,$id);

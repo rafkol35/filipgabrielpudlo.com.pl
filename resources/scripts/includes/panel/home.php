@@ -20,6 +20,39 @@
         });
     }
 
+    function changeFilmIncidence(file,lineEdit){
+        //console.log( "changeFilmIncidence(lineEdit) : " + file );
+        //console.log( $(lineEdit).val() );
+        //console.log( $(lineEdit).value() );
+        
+        var newVal = $(lineEdit).val();
+        if( isNaN(newVal) ){
+            alert("Wpisz liczbe!");
+            //$(lineEdit).val( $(lineEdit).value() );
+            // pobieram i wstawiam poprzednia wartosc
+            
+            return;
+        }
+        
+        if( newVal < 0 ){
+            alert("Wpisz liczbe >= 0!");
+            return;
+        }
+        
+        $.ajax({
+            url: "<?php echo site_url('panel/index/setFilmIncidence'); ?>",
+            type: "post",
+            data: {
+                file: file,
+                incidence: newVal
+            },
+            success: function() {
+                
+            },
+            cache: false
+        });
+    }
+
     tinymce.init({
         selector:  "textarea",
     plugins: [

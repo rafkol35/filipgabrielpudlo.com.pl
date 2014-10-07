@@ -148,14 +148,16 @@ class Page extends CI_Controller {
     }
     
     public function blog(){
-        $data['title'] = "Blog";
-        $data['includeJSs'] = array('index2.php');
+        $dataHead['title'] = "Blog";
+        $dataHead['includeJSs'] = array('index2.php');
+        $dataHead['pageID'] = 'page/blog';
+        $dataHead['PT'] = '2';
         
-        $data['pageID'] = 'page/blog';
-        $data['PT'] = '2';
+        $this->load->model('MPosts','MPosts',TRUE);
+        $dataPage['posts'] = $this->MPosts->getAllTable('date','desc');
         
-        $this->load->view('front/header2',$data);
-        $this->load->view('front/subpages/blog',$data);
+        $this->load->view('front/header2',$dataHead);
+        $this->load->view('front/subpages/blog',$dataPage);
         $this->load->view('front/footer2');
     }
     

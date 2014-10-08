@@ -38,10 +38,7 @@ function getRandomFilmLink($films){
 
 <div style="text-align: center;">
     <video width="950" height="534" autoplay loop>
-        <source src="<?php
-        $f = rand(2, 3);
-        echo base_url('resources/'.  getRandomFilmLink($films))
-        ?>" type="video/mp4">
+        <source src="<?php echo base_url('resources/'.getRandomFilmLink($films)) ?>" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>

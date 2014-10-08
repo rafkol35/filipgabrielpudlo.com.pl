@@ -21,39 +21,39 @@ foreach ( $galleries as $g ){
         <hr style="margin: 5px; clear: both"/>
 
         <div style="float: left;">
-        <p style="float: left;">Album:</p>
+        <p style="float: left;">Zdjęcia :</p>
                                                                                                                             
-        <select id="al_<?php echo $g->id ?>" style="float:left; <?php if (0) echo 'background-color: red;'; ?>" onchange="assocGalleryAlbum(this);">
+<!--        <select id="al_<?php echo $g->id ?>" style="float:left; <?php if (0) echo 'background-color: red;'; ?>" onchange="assocGalleryAlbum(this);">
 
                 <?php
-                $pageIDOk = false;
-
-                foreach ($albums as $album) {
-                    if ($album->id === $g->album_id) {
-                        echo "<option selected=\"selected\" id=\"op_$album->id\">$album->name</option>";
-                        $pageIDOk = true;
-                    } else {
-                        echo "<option id=\"op_$album->id\">$album->name</option>";
-                    }
-                }
-
-                if ($pageIDOk) {
-                    echo '<option id="op_-1">BRAK</option>';
-                } else {
-                    echo '<option id="op_-1" selected="selected">BRAK</option>';
-                }
+//                $pageIDOk = false;
+//
+//                foreach ($albums as $album) {
+//                    if ($album->id === $g->album_id) {
+//                        echo "<option selected=\"selected\" id=\"op_$album->id\">$album->name</option>";
+//                        $pageIDOk = true;
+//                    } else {
+//                        echo "<option id=\"op_$album->id\">$album->name</option>";
+//                    }
+//                }
+//
+//                if ($pageIDOk) {
+//                    echo '<option id="op_-1">BRAK</option>';
+//                } else {
+//                    echo '<option id="op_-1" selected="selected">BRAK</option>';
+//                }
                 ?>
-            </select>
+            </select>-->
         
-    <div class="editButton" style="float: left; margin-left: 10px;"><?php echo anchor('panel/albums/editByProjectID/'.$g->id, 'Edytuj album', array('id'=>"edal_$g->id",'class'=>'edal') ); ?></div>
+    <div class="editButton" style="float: left; margin-left: 10px;"><?php echo anchor('panel/albums/editByProjectID/'.$g->id, 'Dodaj usuń/zdjęcia', array('id'=>"edal_$g->id",'class'=>'edal') ); ?></div>
     <!-- ZDJĘĆ : <?php echo $g->numPhotos; ?> -->
     
     </div>
         
     <br style="clear: both">
-    <div style="float: left">Opis projektu : </div>
-    <div class="editButton" style="float: left; margin-right: 0px;"><?php echo anchor('panel/project/shortDesc/'.$g->id, 'Skrótowy'); ?></div>
-    <div class="editButton" style="float: left; margin-right: 1px;"><?php echo anchor('panel/project/fullDesc/'.$g->id, 'Pełny'); ?></div>
+    <div style="float: left">Edycja tekstów : </div><br />
+    <div class="editButton" style="float: left; margin-right: 0px;"><?php echo anchor('panel/project/shortDesc/'.$g->id, 'Skrótowy (prawa kolumna)'); ?></div>
+    <div class="editButton" style="float: left; margin-right: 1px;"><?php echo anchor('panel/project/fullDesc/'.$g->id, 'Pełny (pod galerią)'); ?></div>
 
 <hr style="margin: 5px; clear: both"/>
     

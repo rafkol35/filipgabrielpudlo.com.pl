@@ -104,6 +104,7 @@ class MAlbums extends CI_Model{
 
     function add(){
         $this->db->insert('albums',array('name'=>'nazwa'));
+        return $this->db->insert_id();
     }
     function addWithName($name){
         $this->db->insert('albums',array('name'=>$name));

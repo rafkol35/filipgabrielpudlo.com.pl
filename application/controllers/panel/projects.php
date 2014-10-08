@@ -32,8 +32,10 @@ class Projects extends MY_Controller {
     }
 
     function add(){
+        $this->load->model('MAlbums','MAlbums',TRUE);
+        $newAlbumID = $this->MAlbums->add();
         $this->load->model('MProjects', 'MProjects', TRUE);
-        $this->MProjects->add(false);
+        $this->MProjects->add(true,$newAlbumID);
     }
 
     function del(){

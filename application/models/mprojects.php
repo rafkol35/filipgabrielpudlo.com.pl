@@ -144,6 +144,7 @@ class MProjects extends CI_Model{
     
     function getAllWork($id){
         $this->db->select('*');
+        $this->db->where('id', $id);
         $this->db->from('projects');
         return current($this->db->get()->result());
     }
@@ -184,7 +185,7 @@ class MProjects extends CI_Model{
         return current($this->db->get('projects')->result())->slideSpeed;
     }
 
-    function add($front){
+    function add($front,$albumID){
         $sort = 0;
         
         if ( $front )
@@ -203,8 +204,8 @@ class MProjects extends CI_Model{
             $this->db->from('projects');
             $sort = $this->db->count_all_results();
         }
-
-        $this->db->insert('projects',array('title_pl'=>'tytuł','title_en'=>'title','sort' => $sort));
+        
+        $this->db->insert('projects',array('title_pl'=>'tytuł','title_en'=>'title','sort' => $sort,'album_id'=>$albumID));
     }
 
     function del($id){

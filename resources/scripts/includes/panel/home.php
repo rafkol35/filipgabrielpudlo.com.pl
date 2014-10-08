@@ -1,6 +1,58 @@
 <script type="text/javascript">
     // <![CDATA[
 
+    function assocGalleryAlbum(mi){
+        //console.log("mi");
+        //console.log($(mi));
+        //console.log( $(mi).attr('id') );
+        
+        var agaid = $(mi).attr('id').substr(3);
+        console.log(agaid);
+        
+        var s = "#" + $(mi).attr('id');
+        var albumid = $(s + " option:selected" ).attr("id");
+        
+        console.log(albumid);
+        
+        //return ;
+        
+        $.ajax({
+            url: "<?php echo site_url('panel/projects/modify'); ?>",
+            type: "post",
+            data: { 
+                //whatID: 'id',
+                id: agaid,
+                what: 'album_id',
+                val: albumid.substr(3)
+            },
+            success: function(data){ 
+                console.log(data);
+            },
+            cache: false
+        });   
+    }
+    
+    function assocLastestNewToPost(select){
+        var latestNewNum = $(select).attr('id').substr(5);
+        //console.log(latestNewNum);
+        var s = "#" + $(select).attr('id');
+        var postid = $(s + " option:selected" ).attr("id");
+        //console.log(postid);
+        
+        $.ajax({
+            url: "<?php echo site_url('panel/index/setLatestNewLink'); ?>",
+            type: "post",
+            data: { 
+                lnn: latestNewNum,
+                postid: postid.substr(3)
+            },
+            success: function(){ 
+                //console.log(data);
+            },
+            cache: false
+        });   
+    }
+
     function saveTexts() {
         var ed1 = tinyMCE.get('homelatest1');
         var ed2 = tinyMCE.get('homelatest2');

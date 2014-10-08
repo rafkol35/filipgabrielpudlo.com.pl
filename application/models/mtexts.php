@@ -32,6 +32,13 @@ class MTexts extends MY_Model{
         return 'src="'.$this->img($name,$lang).'"';
     }
 
+    function getLatestNews(){
+        $latestNews = array();
+        $latestNews[1] = $this->get('name', 'homelatest1');
+        $latestNews[2] = $this->get('name', 'homelatest2');
+        $latestNews[3] = $this->get('name', 'homelatest3');
+        return $latestNews;
+    }
         
 }
 

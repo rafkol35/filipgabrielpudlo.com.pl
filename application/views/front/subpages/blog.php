@@ -4,6 +4,7 @@
 foreach ($posts as $post){
     if( $post->show == 0) continue;
     ?>
+<a name="post<?php echo $post->id; ?>"></a>
 <div class="post">
     <h1><?php echo $post->title; ?></h1>
     <h5><?php echo $post->date; ?></h5>

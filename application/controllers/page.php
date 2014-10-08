@@ -67,9 +67,14 @@ class Page extends CI_Controller {
         $dataHead['pageID'] = 'page/home';
         $dataHead['PT'] = '1';
         
+        $this->load->model('MTexts', 'MTexts', TRUE);
+        $this->load->model('MFilms', 'MFilms', TRUE);
+        
+        $dataPage['films'] = $this->MFilms->getAllTable();
+        $dataPage['latestNews'] = $this->MTexts->getLatestNews();
         
         $this->load->view('front/header2',$dataHead);
-        $this->load->view('front/subpages/home');
+        $this->load->view('front/subpages/home',$dataPage);
         $this->load->view('front/footer2');
     }
 

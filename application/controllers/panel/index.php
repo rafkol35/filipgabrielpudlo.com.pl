@@ -34,20 +34,17 @@ class Index extends MY_Controller {
         
         $map = directory_map('./resources/',1);
         
-        $dataPage['homelatest1'] = $this->MTexts->get('name','homelatest1')->pl;
-        $dataPage['homelatest2'] = $this->MTexts->get('name','homelatest2')->pl;
-        $dataPage['homelatest3'] = $this->MTexts->get('name','homelatest3')->pl;
+        $this->load->model('MPosts','MPosts',TRUE);
+        $dataPage['posts'] = $this->MPosts->getAllTable('date','desc');
         
-        //$dataPage['mp4s'] = $map;      
-        //$dataPage['mp4s2'] = get_dir_file_info('./resources/', TRUE);      
-        //$dataPage['mp4s3'] = get_mime_by_extension('./resources/Instalation_1_950.mp4');
+        $dataPage['homelatest1'] = $this->MTexts->get('name','homelatest1')->pl;
+        $dataPage['homelatest1link'] = $this->MTexts->get('name','homelatest1')->en;
+        $dataPage['homelatest2'] = $this->MTexts->get('name','homelatest2')->pl;
+        $dataPage['homelatest2link'] = $this->MTexts->get('name','homelatest2')->en;
+        $dataPage['homelatest3'] = $this->MTexts->get('name','homelatest3')->pl;
+        $dataPage['homelatest3link'] = $this->MTexts->get('name','homelatest3')->en;
         
         $dataPage['numberOfNewFiles'] = $this->MFilms->update();
-        
-        //$path_parts = pathinfo('./resources/Instalation_1_950.mp4');
-        //$path_parts = pathinfo('./resources/styles');
-        //$dataPage['mp4s3'] = $path_parts;
-        
         $dataPage['mp4s'] = $this->MFilms->getAllTable(); 
         
         $this->load->view('panel/header',$data);
@@ -64,6 +61,11 @@ class Index extends MY_Controller {
         $this->load->model('MFilms', 'MFilms', TRUE);
         $this->MFilms->set('file',$_POST['file'],'incidence',$_POST['incidence']);
         //echo 'file '.$_POST['file'].' incidence '.$_POST['incidence'];
+    }
+    function setLatestNewLink(){
+        $this->load->model('MTexts', 'MTexts', TRUE);
+        $this->MTexts->set('name','homelatest'.$_POST['lnn'],'en',$_POST['postid']);
+        //echo 'name '.'homelatest'.$_POST['lnn'].' en '.$_POST['postid'];
     }
     
     function about(){
